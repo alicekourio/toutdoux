@@ -1,0 +1,4 @@
+ - create server fastify in server.ts
+ index.ts -> entrypoint
+ server ->  where the server is defined
+ routes.ts -> where you have your routes
