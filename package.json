@@ -19,10 +19,14 @@
   },
   "homepage": "https://github.com/alicekourio/toutdoux#readme",
   "dependencies": {
-    "fastify": "^3.27.2"
+    "fastify": "^3.27.2",
+    "sqlite3": "^5.0.2",
+    "uuid": "^8.3.2",
+    "zod": "^3.13.4"
   },
   "devDependencies": {
     "@types/node": "^17.0.20",
+    "@types/uuid": "^8.3.4",
     "nodemon": "^2.0.15",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5"
