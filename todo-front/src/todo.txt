@@ -1,0 +1,6 @@
+créer un bouton
+cliquer sur le bouton
+quand bouton trigger : console.log le clique
+et trigger un fetch sur la route get dans back-end
+récupérer le body de cette route
+console.log le retour côté front
