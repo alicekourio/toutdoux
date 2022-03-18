@@ -2,11 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-async function test() {
+async function chat() {
   console.log('ça roule');
   const response = await fetch('http://localhost:3000/api/', {
     method: 'GET',
-    headers: new Headers({'content-type': 'Access-Control-Allow-Origin'}),
+    headers: new Headers({'Content-Type': 'Access-Control-Allow-Origin'}),
     mode: 'cors'
   });
   return response
@@ -28,7 +28,7 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={test}>
+        <button onClick={chat}>
         Clique ici
       </button>
       </header>
