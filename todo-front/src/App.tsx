@@ -2,15 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-async function chat() {
-  console.log('ça roule');
-  const response = await fetch('http://localhost:3000/api/', {
-    method: 'GET',
-    headers: new Headers({'Content-Type': 'Access-Control-Allow-Origin'}),
-    mode: 'cors'
-  });
-  return response
-}
+// async function chat() {
+//   console.log('ça roule');
+//   const response = await fetch('http://localhost:3000/api/', {
+//     method: 'GET',
+//     headers: new Headers({'Content-Type': 'Access-Control-Allow-Origin'}),
+//     // mode: 'cors'
+//   });
+//   return response
+// }
 
 function App() {
   return (
@@ -28,9 +28,9 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={chat}>
+        {/* <button onClick={chat}>
         Clique ici
-      </button>
+      </button> */}
       </header>
     </div>
   );
