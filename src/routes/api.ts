@@ -48,7 +48,7 @@ export function apiRoutes(
       // console.log(title);
       const parseResult = createTodoBodySchema.safeParse(request.body);
       if (parseResult.success === false) {
-        reply.status(400);
+        reply.status(400).send(parseResult.error);
         return;
       }
       // create new object as Todo base on request.body
@@ -61,16 +61,16 @@ export function apiRoutes(
 
       // send data in DB
 
-      // const db = await openDb();
+      const db = await openDb();
 
-      // const result = await db.run(
-      //   'INSERT INTO todo(id, title, completed) VALUES (:id, :title, :completed)',
-      //   {
-      //     ':id': todoToInsert.id,
-      //     ':title': todoToInsert.title,
-      //     ':completed': todoToInsert.completed,
-      //   }
-      // );
+      const result = await db.run(
+        'INSERT INTO todo(id, title, completed) VALUES (:id, :title, :completed)',
+        {
+          ':id': todoToInsert.id,
+          ':title': todoToInsert.title,
+          ':completed': todoToInsert.completed,
+        }
+      );
 
       // then return it
       return reply.status(200).send(todoToInsert);
