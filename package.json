@@ -7,7 +7,8 @@
     "dev": "nodemon --config nodemon.json src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "migrate": "node scripts/migrate.js"
+    "migrate": "node scripts/migrate.js",
+    "migration:make": "node scripts/createMigrationFile.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/alicekourio/toutdoux#readme",
   "dependencies": {
+    "date-fns": "^2.28.0",
     "fastify": "^3.27.2",
     "sqlite": "^4.0.25",
     "sqlite3": "^5.0.4",
