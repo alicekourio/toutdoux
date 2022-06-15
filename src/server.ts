@@ -1,5 +1,5 @@
 import fastify from 'fastify';
-import { apiRoutes } from './routes/api';
+import { apiRoutes } from './http/routes/api';
 
 const server = fastify({ logger: true });
 
