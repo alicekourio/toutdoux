@@ -17,7 +17,7 @@ async function openDb(): Promise<
   Database<sqlite3.Database, sqlite3.Statement>
 > {
   return open({
-    filename: path.join(__dirname, '../../database/Todo.db'),
+    filename: path.join(process.cwd(), 'database/database.sqlite'),
     driver: sqlite3.Database,
   });
 }
